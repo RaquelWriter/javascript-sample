@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const election = ['rock', 'paper', 'scissors'];
+      let boardPlayer = 0;
+      let boardComputer = 0;
+      function computerPlay() {
+        let max = 2;
+        let min = 0;
+        let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        let computerSelection = election[randomNumber];
+        return computerSelection;
+      }
+      // Prompt validation - Return TRUE / FALSE
+      function validatePrompt(val) {
+        return election.includes(val.toLowerCase());
+      }
+      function playRound(playerSelection, computerSelection) {
+        if (playerSelection === computerSelection) {
+          console.log(
+            `It's a tie! You choose: ${playerSelection}, Computer choose: ${computerSelection}
+      			BOARD -> PLAYER: ${boardPlayer}, COMPUTER: ${boardComputer}`
+          );
+        } else if (
+          (playerSelection === 'rock' && computerSelection === 'scissors') ||
+          (playerSelection === 'scissors' && computerSelection === 'paper') ||
+          (playerSelection === 'paper' && computerSelection === 'rock')
+        ) {
+          boardPlayer += 1;
+          console.log(
+            `You WIN!, You choose: ${playerSelection}, Computer choose: ${computerSelection}
+      			BOARD -> PLAYER: ${boardPlayer}, COMPUTER: ${boardComputer}`
+          );
+        } else {
+          boardComputer += 1;
+          console.log(
+            `I WIN!, You choose: ${playerSelection}, Computer choose: ${computerSelection}
+      			BOARD -> PLAYER: ${boardPlayer}, COMPUTER: ${boardComputer}`
+          );
+        }
+      }
+      function printFinalResult() {
+        if (boardPlayer > boardComputer) {
+          console.log(
+            `GAME OVER: You WON ${boardPlayer} times and computer won ${boardComputer} times`
+          );
+        } else if (boardComputer > boardPlayer) {
+          console.log(
+            `GAME OVER: Computer WON ${boardComputer} times and player won ${boardPlayer} times`
+          );
+        } else {
+          console.log(
+            `GAME OVER: It's a tie! Computer WON ${boardComputer} times and player won ${boardPlayer} times`
+          );
+        }
+      }
+      function game() {
+        for (let i = 0; i < 5; i++) {
+          let playerSelection = prompt(
+            `ROUND ${i + 1}\n CHOOSE YOUR HAND!\n (rock, paper or scissors\nOr type quit to exit the game`
+          );
+
+		  if (playerSelection === "quit") return;
+
+          const computerSelection = computerPlay();
+		  // Prompt validation
+          while (!validatePrompt(playerSelection.toLowerCase())) {
+            playerSelection = prompt(
+              `*** WRONG INPUT ***\nPlease, choose only: rock, paper or scissors\n*** ROUND ${
+                i + 1
+              } ***\nOr type quit to exit the game`
+            );
+		  	if (playerSelection === "quit") return;
+          }
+		  // Play the Round
+          playRound(
+            playerSelection.toLowerCase(),
+            computerSelection.toLowerCase()
+          );
+        }
+        printFinalResult();
+      }
+      game();
+    </script>
+  </head>
+  <body></body>
+</html>
