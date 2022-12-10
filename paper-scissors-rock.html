@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Scissors Rock</title>
+    <link rel="stylesheet" href="./paper-scissors-rock.css">
+    
+  </head>
+  <body>
+
+    <div class='container'>
+      <h1>Stone / Paper / Scissors</h1>
+      <h2>Choose!</h2>
+      <h3>Round: <span id='round'></span></h3>
+      <h4 id='info'>CHOOSE YOUR HAND!</h4>
+      <div class='container-stone-paper-scissors'>
+          <img
+            id ='stone'
+            alt='stone'
+            src='./images/stone.png'
+          />
+          <img
+            id ='paper'
+            alt='paper'
+            src='./images/paper.png'
+          />
+          <img
+            id ='scissors'
+            alt='scissors'
+            src='./images/scissors.png'
+          />
+      </div>
+      <div class='results-stone-paper-scissors'>
+        <div>
+          You choose: <span id='spsUser'></span><br/>I choose: <span id='spsMachine'></span>
+        </div>
+        <div id='resultGameSPS'></div>
+        <div>
+          Your points: <span id='spsUserPoints'></span><br/>My points: <span id='spsMachinePoints'></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./paperScissorsRock.js"></script>
+  </body>
+</html>

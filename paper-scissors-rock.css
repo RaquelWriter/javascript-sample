@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: white;
+  font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', Arial,
+    sans-serif;
+  vertical-align: baseline;
+}
+body {
+  background: url('./images/03.jpg');
+  margin: 2vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+}
+img {
+  max-width: 10rem;
+  height: auto;
+  border: 3px solid #ff59f7;
+  border-radius: 50%;
+}
+/* img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2) ease;
+  cursor: pointer;
+} */
+img:hover {
+  border: 3px solid #fff459;
+  color: #ffec59;
+  background: #fff;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 80%;
+  margin: 2vw auto;
+  border: solid 1vw white;
+  border-radius: 2vw;
+  background-color: rgba(20, 0, 80, 0.4);
+}
+h1,
+h2 {
+  font-size: 4vw;
+  grid-area: title;
+  text-align: center;
+  user-select: none;
+}
+h2,
+h3,
+h4 {
+  font-size: 2vw;
+}
+div {
+  padding: 2vh;
+}
+.whitebox {
+  margin: 1.5vw auto;
+  padding: 2vw;
+  font-size: 3vw;
+  border: solid 0.5vw #008cba;
+  min-width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+  border-radius: 2vw;
+}
+.container-stone-paper-scissors,
+.results-stone-paper-scissors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2em;
+  flex-direction: row;
+}
+.results-stone-paper-scissors {
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 600px) {
+  .container-stone-paper-scissors,
+  .results-stone-paper-scissors {
+    flex-direction: column;
+  }
+}
