@@ -1,0 +1,87 @@
+*{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+}
+.container{
+    margin: 0 auto;
+    background-color: rgb(68, 4, 90);
+    gap: 1em;
+    font-weight: bold;
+    padding: 2em;
+    margin-top: 5vw;
+    width: 400px;
+    font-size: 2em;
+    border-radius: 0.3em;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+.screen{
+    background-color: black;
+    color: white;
+    min-height: 2em;
+    width: 100%;
+    border-radius: 0.3em;
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+}
+#prev-value, #actual-value{
+    margin-right: 0.3em;
+    text-align: right;
+}
+#prev-value{
+    font-size: 1em;
+    min-height: 1.5em;
+}
+#actual-value{
+    font-size: 1.2em;
+    min-height: 1.5em;
+}
+.wrapper-ac-division, .wrapper-nums-operators, .wrapper-zero-comma-equal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-ac-division{
+    flex-grow: 4;
+}
+.wrapper-nums-operators{
+    flex-wrap: wrap;
+}
+button{
+    min-height: 3em;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+}
+.button:hover {
+	text-shadow: 1px 1px rgba(0,0,0,.3); 
+	background:#1f1f37;
+	box-shadow:inset 4px 4px 4px rgba(0,0,0,.3), inset -3px -3px 3px rgba(255,255,255,.2);
+}
+.btn-number{
+    flex-grow: 1;
+    background-color: lightpink;
+    flex-basis: 25%;
+}
+.btn-number.zero{
+    flex-basis: 50%;
+}
+.btn-operator, .btn-equal{
+    background-color: blanchedalmond;
+    flex-basis: 25%;
+}
+.btn-equal{
+    background-color: rgb(0, 111, 83);
+    color: white;
+}
+.btn-operator.division, .btn-operator.equal, .btn-number.comma{
+    flex-basis: 25%;
+}
+.btn-clear{
+    flex-basis: 25%;
+}
+#btn-minus{
+    flex-basis: 25%;
+}
+.btn-delete{
+    flex-basis: 25%;
+}
